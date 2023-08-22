@@ -2,7 +2,10 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   mode: 'jit',
-  content: ['./pages/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./src/app/**/*.{js,ts,jsx,tsx}",
+  ],
   // darkMode: media,
   theme: {
     extend: {
@@ -11,9 +14,9 @@ module.exports = {
         'xxs': '.6rem',
       },
       colors: {
-        primary: '#0073E5',
+        primary: '#FF5500',
         primaryLHue: '#0099E5',
-        primaryDHue: '#004DE5',
+        primaryDHue: '#E4F2FF',
         secondary: '#151515',
         accent: '#40C000',
         highlight: '#FF4D4D',

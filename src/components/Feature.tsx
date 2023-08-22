@@ -1,7 +1,7 @@
-import * as OutlineIcons from "@heroicons/react/outline";
-import * as SolidIcons from "@heroicons/react/solid";
+import * as OutlineIcons from "@heroicons/react/24/outline";
+import * as SolidIcons from "@heroicons/react/24/solid";
 
-import { classNames } from "@/utils/functions";
+import { classNames } from "@utils/functions";
 
 export type HeroIcon = keyof typeof SolidIcons | keyof typeof OutlineIcons;
 
@@ -32,24 +32,24 @@ export default function Feature({
   text,
   description,
   className,
-  // tags,
-}: FeatureProps) {
+}: // tags,
+FeatureProps) {
   return (
     <div
       className={classNames(
         className ? className : "",
-        "relative rounded-xl bg-white p-3 text-secondary shadow xl:p-7"
+        "relative  rounded-xl bg-white p-3 text-secondary shadow xl:p-7"
       )}
     >
-      <div className="mb-2 items-start gap-2 lg:flex xl:gap-6">
-        <div className="mt-3 mb-3 flex h-8 w-8 lg:mb-0 lg:h-16 lg:w-16 xl:p-3 items-center justify-center rounded-full bg-primary p-1 text-center text-white">
+      <div className="mb-2 flex flex-col items-start gap-2 whitespace-pre-line lg:flex xl:gap-6">
+        <div className="mb-3 mt-3 flex h-8 w-8 items-center justify-center rounded-full bg-primary p-1 text-center text-white lg:mb-0 lg:h-16 lg:w-16 xl:p-3">
           <HeroIcon icon={icon} className="w-4 lg:w-7" outline />
         </div>
         <div>
           <span className="text-base font-semibold capitalize leading-normal tracking-wider xl:text-2xl xl:leading-loose">
             {text}
           </span>
-          <p className="leading-relaxed">{description}</p>
+          <p className="text-sm leading-relaxed">{description}</p>
         </div>
       </div>
 

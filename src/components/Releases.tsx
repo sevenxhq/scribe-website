@@ -1,21 +1,20 @@
 import React from "react";
 
-import {  GetDownloadUrlQuery } from "@/graphql/graphql";
+import { GetDownloadUrlQuery } from "@graphql/graphql";
 
 import AppleLogo from "../../public/logos/apple.svg";
 import LinuxLogo from "../../public/logos/linux.svg";
 import WindowsLogo from "../../public/logos/windows.svg";
 import styles from "../../styles/Home.module.css";
 
-
 export default function Releases({ repo }: { repo: GetDownloadUrlQuery }) {
-
-  const filtered = repo?.repository?.releases?.nodes?.filter(a => a?.isPrerelease === false);
-
+  const filtered = repo?.repository?.releases?.nodes?.filter(
+    (a) => a?.isPrerelease === false
+  );
 
   // const relAssets = repo?.repository?.releases?.nodes![0]?.releaseAssets.edges;
 
-  const relAssets = filtered![0]?.releaseAssets.edges;
+  // const relAssets = filtered![0]?.releaseAssets.edges;
 
   // let relAssets = repoNode?.releaseAssets?.edges;
 
@@ -43,8 +42,7 @@ export default function Releases({ repo }: { repo: GetDownloadUrlQuery }) {
 
   return (
     <div className="flex gap-5 text-xs font-medium tracking-wider text-white xl:text-base">
-      {relAssets?.map((element, index) => {
-      
+      {/* {relAssets?.map((element, index) => {
         if (element?.node?.name.endsWith(".exe"))
           return (
             <a
@@ -84,7 +82,7 @@ export default function Releases({ repo }: { repo: GetDownloadUrlQuery }) {
               MacOSX
             </a>
           );
-      })}
+      })} */}
     </div>
   );
 }

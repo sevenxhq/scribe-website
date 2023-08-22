@@ -17,13 +17,19 @@
     "baseUrl": ".",
     "paths": {
       "contentlayer/generated": ["./.contentlayer/generated"],
-      "@/graphql/*": ["src/graphql/generated/*"],
-      "@/components/*": ["src/components/*"],
-      "@/layout/*": ["src/layout/*"],
-      "@/utils/*": ["src/utils/*"],
-      "@/assests/*": ["src/assests/logos/*"]
-    }
+      "@graphql/*": ["src/graphql/generated/*"],
+      "@components/*": ["src/components/*"],
+      "@layout/*": ["src/components/layout/*"],
+      "@utils/*": ["src/utils/*"],
+      "@assests/*": ["src/assests/logos/*"],
+      "@public/*": ["public/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".contentlayer/generated"],
   "exclude": ["node_modules"]
 }
