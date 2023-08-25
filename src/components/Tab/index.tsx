@@ -70,7 +70,7 @@ export default function WebTab({ data }: DataProps) {
   }, []);
   return (
     <Tab.Group as={Fragment}>
-      <div className="bg-primary bg-gradient-to-tr from-primaryDHue to-primary pb-52">
+      <div className="bg-primary bg-gradient-to-tr from-primary to-highlight pb-52">
         <div className="container mx-auto">
           {/* <Menu /> */}
           <div className="py-20 text-center xl:py-40">
