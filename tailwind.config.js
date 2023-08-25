@@ -15,11 +15,11 @@ module.exports = {
       },
       colors: {
         primary: '#FF5500',
-        primaryLHue: '#0099E5',
-        primaryDHue: '#E4F2FF',
+        primaryLHue: '#E79797',
+        primaryDHue: '#F05000',
         secondary: '#151515',
         accent: '#40C000',
-        highlight: '#FF4D4D',
+        highlight: '#FF8B52',
       },
       fontFamily: {
         sans: ['Open Sans', ...defaultTheme.fontFamily.sans]
