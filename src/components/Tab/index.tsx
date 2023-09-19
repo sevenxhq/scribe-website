@@ -40,7 +40,7 @@ export default function WebTab({ data }: DataProps) {
     {
       title: "Audio Mode",
       image: "/images/editor-audio.png",
-      isComingSoon: true,
+      isComingSoon: false,
     },
     // {
     //   title: "Machine Translation",
@@ -67,7 +67,7 @@ export default function WebTab({ data }: DataProps) {
         setDownloadUrl(element?.node?.downloadUrl);
       }
     });
-  }, []);
+  }, [relAssets]);
   return (
     <Tab.Group as={Fragment}>
       <div className="bg-primary bg-gradient-to-tr from-primary to-highlight pb-52">
