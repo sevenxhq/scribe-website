@@ -4,7 +4,7 @@ import { Popover } from "@headlessui/react";
 import { Bars4Icon } from "@heroicons/react/24/outline";
 
 import MobileMenu from "@components/layout/MobileMenu";
-import AutographaLogo from "@public/logos/autographa.svg";
+import AutographaLogo from "@public/logos/Logo.svg";
 
 export default function Menu() {
   return (
@@ -14,7 +14,7 @@ export default function Menu() {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span className="sr-only">Workflow</span>
-              <AutographaLogo className="h-8 w-8 text-white" />
+              <AutographaLogo className="h-10 w-10 text-white" />
             </a>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
@@ -47,7 +47,7 @@ export default function Menu() {
               Try It
             </a> */}
             <a
-              href="https://github.com/friendsofagape/autographa/releases"
+              href="https://github.com/bible-technology/scribe-scripture-editor"
               className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-[#DC2626] px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-white hover:text-secondary"
             >
               Github
