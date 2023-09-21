@@ -27,7 +27,7 @@ const solutions = [
   {
     name: "Docs",
     description: "Speak directly to your customers in a more meaningful way.",
-    href: "https://docs.autographa.org/",
+    href: "https://docs.scribe.bible/docs/",
     icon: CursorArrowRaysIcon,
   },
 ];
