@@ -98,11 +98,14 @@ export default function WebTab({ data }: DataProps) {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   href="#"
-                  className="block items-center justify-center whitespace-nowrap rounded-lg border border-transparent bg-white 
+                  className="relative block items-center justify-center whitespace-nowrap rounded-lg border border-transparent bg-white 
                                 p-2 px-4 text-base font-bold 
                                 text-secondary shadow-sm hover:bg-secondary hover:text-white xl:px-8 xl:py-4 xl:text-2xl"
                 >
                   Try Demo online
+                  <span className="absolute left-0 right-0 mx-auto -mt-10 w-16 rounded-full bg-highlight p-1 text-xxxs font-bold text-white md:w-20 xl:w-24 xl:px-2 xl:text-xxs">
+                    coming soon
+                  </span>
                 </motion.a>
               </div>
               <div className="mx-4 flex flex-col items-center md:w-1/2 xl:mx-10">
