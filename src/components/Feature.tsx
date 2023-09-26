@@ -38,7 +38,7 @@ FeatureProps) {
     <div
       className={classNames(
         className ? className : "",
-        "relative  rounded-xl bg-white p-3 text-secondary shadow xl:p-7"
+        "relative  rounded-xl bg-white p-3 text-secondary shadow lg:p-4"
       )}
     >
       <div className="mb-2 flex flex-col items-start gap-2 whitespace-pre-line lg:flex xl:gap-6">
@@ -49,7 +49,9 @@ FeatureProps) {
           <span className="text-base font-semibold capitalize leading-normal tracking-wider xl:text-2xl xl:leading-loose">
             {text}
           </span>
-          <p className="text-sm leading-relaxed">{description}</p>
+          <p className="text-xxs lg:text-xs 2xl:text-sm leading-relaxed">
+            {description}
+          </p>
         </div>
       </div>
 
