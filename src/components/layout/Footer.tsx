@@ -11,10 +11,10 @@ export default function Footer() {
           </div>
           <ul className="gap-5 xl:flex">
             <li>
-              <a href="#">Features</a>
+              <a href="#features">Features</a>
             </li>
             <li>
-              <a href="#">Docs</a>
+              <a href="https://docs.scribe.bible/docs/">Docs</a>
             </li>
             <li>
               <a href="#">Success Stories</a>
