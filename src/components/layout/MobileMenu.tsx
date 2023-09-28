@@ -13,7 +13,7 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
-import AutographaLogo from "../../../public/logos/autographa.svg";
+import AutographaLogo from "@public/logos/Logo.svg";
 // import { classNames } from '@utils/functions'
 
 const solutions = [
@@ -21,13 +21,13 @@ const solutions = [
     name: "Features",
     description:
       "Get a better understanding of where your traffic is coming from.",
-    href: "#",
+    href: "#features",
     icon: ChartBarIcon,
   },
   {
     name: "Docs",
     description: "Speak directly to your customers in a more meaningful way.",
-    href: "https://docs.scribe.bible/docs/",
+    href: "https://docs.scribe.bible/",
     icon: CursorArrowRaysIcon,
   },
 ];
@@ -96,7 +96,7 @@ export default function MobileMenu() {
             <div className="flex items-center justify-between">
               <div>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <AutographaLogo className="h-10 text-primary" />
+                <AutographaLogo className="h-10 stroke-primary" />
               </div>
               <div className="-mr-2">
                 <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -126,7 +126,7 @@ export default function MobileMenu() {
             <div>
               <a
                 href="#"
-                className="flex w-full items-center justify-center rounded-md border border-transparent bg-primary px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                className="flex w-full items-center justify-center rounded-md border border-transparent bg-primary px-4 py-2 text-base font-medium text-white shadow-sm"
               >
                 Download
               </a>

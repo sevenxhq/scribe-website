@@ -14,7 +14,7 @@ export default function Menu() {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span className="sr-only">Workflow</span>
-              <AutographaLogo className="h-10 w-10 text-white" />
+              <AutographaLogo className="h-10 w-10 stroke-white" />
             </a>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
@@ -32,7 +32,7 @@ export default function Menu() {
               Features
             </a>
             <a
-              href="https://docs.scribe.bible/docs/"
+              href="https://docs.scribe.bible/"
               className="text-base font-medium text-white hover:text-gray-900"
             >
               Docs
