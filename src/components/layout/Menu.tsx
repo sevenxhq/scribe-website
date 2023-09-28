@@ -32,7 +32,7 @@ export default function Menu() {
               Features
             </a>
             <a
-              href="https://docs.scribe.bible/docs/"
+              href="https://docs.scribe.bible/"
               className="text-base font-medium text-white hover:text-gray-900"
             >
               Docs
