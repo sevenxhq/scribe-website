@@ -14,7 +14,7 @@ export default function Footer() {
               <a href="#features">Features</a>
             </li>
             <li>
-              <a href="https://docs.scribe.bible/docs/">Docs</a>
+              <a href="https://docs.scribe.bible/">Docs</a>
             </li>
             <li>
               <a href="#">Success Stories</a>
