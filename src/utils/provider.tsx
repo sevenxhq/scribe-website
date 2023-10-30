@@ -3,15 +3,15 @@
 import React, { PropsWithChildren, useState } from "react";
 
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
-// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 function Providers({ children }: any) {
-  const queryClient = new QueryClient();
+  const [queryClient] = useState(new QueryClient());
 
   return (
     <QueryClientProvider client={queryClient}>
       {children}
-      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 }

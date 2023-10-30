@@ -3,6 +3,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 
 import { Tab } from "@headlessui/react";
+import { QueryClient, useQuery, useQueryClient } from "@tanstack/react-query";
 import { motion, AnimatePresence } from "framer-motion";
 import { OsTypes, isWindows, isMacOs } from "react-device-detect";
 
@@ -19,13 +20,27 @@ interface DataProps {
   data?: any;
 }
 
-export default function WebTab({ data }: DataProps) {
+async function getDownloadUrlQuery() {
+  try {
+    const response = await fetch("/api/getRelease");
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+export default function WebTab() {
+  const { data } = useQuery({
+    queryKey: ["GetRelease"],
+    queryFn: getDownloadUrlQuery,
+    refetchInterval: 1440000,
+  });
   const filtered = data?.repository?.releases?.nodes?.filter(
     (a: any) => a?.isPrerelease === false
   );
 
-  const relAssets = filtered![0]?.releaseAssets?.edges;
-  const version = filtered![0]?.tagName;
+  const relAssets = filtered?.[0]?.releaseAssets?.edges;
+  const version = filtered?.[0]?.tagName;
 
   const categoriesItems: category[] = [
     {
