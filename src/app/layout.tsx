@@ -4,8 +4,8 @@ import Providers from "@utils/provider";
 import "./globals.css";
 
 export const metadata = {
-  title: "Scribe Website",
-  description: "SCRIBE, Scripture editing made simple",
+  title: "Scribe : scripture editing made simple",
+  description: "A Bible translation editor that is owned by and developed for the community.",
 };
 
 export default function RootLayout({
