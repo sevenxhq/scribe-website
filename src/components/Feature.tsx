@@ -1,5 +1,6 @@
 import * as OutlineIcons from "@heroicons/react/24/outline";
 import * as SolidIcons from "@heroicons/react/24/solid";
+import Link from "next/link";
 
 import { classNames } from "@utils/functions";
 
@@ -34,6 +35,27 @@ export default function Feature({
   className,
 }: // tags,
 FeatureProps) {
+  function extractTextBeforeLink(input: string) {
+    const regex = /\[[^\]]*\]\([^\)]*\)/;
+    const linkIndex = input.search(regex);
+    if (linkIndex !== -1) {
+      return input.slice(0, linkIndex).trim();
+    } else {
+      return input;
+    }
+  }
+  function parseString(input: string) {
+    const regex = /\[(.*?)\]\((.*?)\)/;
+    const match = input.match(regex);
+    if (match) {
+      return {
+        text: match[1], 
+        link: match[2], 
+      };
+    } else {
+      return null;
+    }
+  }
   return (
     <div
       className={classNames(
@@ -50,7 +72,12 @@ FeatureProps) {
             {text}
           </span>
           <p className="text-xxs lg:text-xs 2xl:text-sm leading-relaxed">
-            {description}
+            <span>{extractTextBeforeLink(description)}</span>
+            {parseString(description) && (
+              <Link className="mx-1 text-primary font-semibold" href={`${parseString(description)?.link}`}>
+                {parseString(description)?.text}
+              </Link>
+            )}
           </p>
         </div>
       </div>
