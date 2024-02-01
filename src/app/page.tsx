@@ -8,7 +8,8 @@ import WebTab from "@components/Tab";
 import { allSlideLists, allHeros } from "contentlayer/generated";
 import { allFeatureLists } from "contentlayer/generated";
 
-console.log(allFeatureLists)
+
+
 
 export default function Page() {
 
